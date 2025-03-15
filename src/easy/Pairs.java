@@ -7,6 +7,7 @@ import java.util.Set;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import java.util.*;
 
 /*
  Given an array of integers and a target value, determine the number of pairs of array elements that have a
@@ -20,9 +21,9 @@ thre are three values that differ by k = 1: 2-1 = 1, 3-2 = 1, and 4-3 = 1. Retur
  */
 public class Pairs {
     public static int pairs(int k, List<Integer> array) {
-        Set<Integer> set = new HashSet<>();
+        Set<Integer> set = new HashSet<>(array);
 
-        array.stream().forEach(e -> set.add(e));
+        //array.stream().forEach(e -> set.add(e));
 
         Collections.sort(array);
 
@@ -31,13 +32,17 @@ public class Pairs {
         return array
                 .stream()
                 .filter(e -> set.contains(e - k))    
-                //.peek(e -> System.out.println(e))
-                .collect(Collectors.toSet())
+                .peek(e -> System.out.println(e))
+                .collect(Collectors.toList())
                 .size();
     }
 
     public static void main(String[] args) {
-        System.out.println(pairs(1, List.of(1, 2, 3, 4))); // 3
-        System.out.println(pairs(2, List.of(1, 5, 3, 4, 2))); // 3
+        List<Integer> A = new ArrayList<>(List.of(1, 2, 3, 4));
+        //System.out.println(pairs(1, A)); // 3
+        A = new ArrayList<>(List.of(1, 5, 3, 4, 2));
+        System.out.println(pairs(2, A)); // 3
+        A = new ArrayList<>(List.of(1, 2, 3, 9, 5));
+        //System.out.println(pairs(2, A)); // 2
     }
 }

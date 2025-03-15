@@ -1,0 +1,50 @@
+
+(100 coins puzzle)
+
+Question: 100 coins are lying flat on a table. 10 of them are heads up and 90 are tails up.You can’t see which one is which.How can we split the coins into two piles such that there are same number of heads up in each pile?
+
+Note: It is allowed to flip the coins of one pile once.
+  
+Answer: Make 2 piles with 10 coins and 90 coins each. Now, flip all the coins in the smaller pile. 
+  
+Explanation : Make 2 piles and say pile one has ‘h’ no. of heads and ‘t’ no. of tails while the other pile will have ’10-h’ heads and ’90-t’ tails.Now we can flip coins of one pile,so lets flip coins of any pile(say 2nd pile) then no. of heads and tails interchange and now no. of heads are ’90-t’ and no. of tails are ’10-h’.
+
+Now no. of heads in pile 1 = no. of heads in pile 2
+
+h=90-t
+
+Therefore,h+t=90
+
+And no. of coins in pile 1 is ‘h+t’
+
+So,split the coins into 90 and 10. 
+
+-------------------------------------------------------------------------------------------------------------
+(10 Coins Puzzle)
+Last Updated : 27 Jul, 2023
+You are blindfolded and 10 coins are placed in front of you on the table. You are allowed to touch the coins but can’t tell which way up they are by feel. You are told that there are 5 coins head up, and 5 coins tails up but not which ones are which. 
+
+Can you make two piles of coins each with the same number of heads up? You can flip the coins any number of times. 
+
+ANSWER: 
+
+Yes 
+
+Explanation: 
+
+Make 2 piles with an equal number of coins. Now, flip all the coins in one of the piles. 
+
+Let’s consider a simple case: 
+
+P1: H T T T T 
+P2: H H H H T 
+
+By flipping P1 
+
+P1: T H H H H 
+
+P2: H H H H T 
+
+P1(heads) = P2(heads) 
+
+

@@ -33,7 +33,7 @@ public class BalancedBrackets {
                     return "NO";
                 } else if (ch == ']' && sch != '[') {
                     return "NO";
-                } else if (ch == '{' && sch == '}') {
+                } else if (ch == '{' && sch != '}') {
                     return "NO";
                 }
 
