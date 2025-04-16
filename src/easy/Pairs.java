@@ -17,7 +17,7 @@ Example
 k=1
 arr = [1,2,3,4]
 
-thre are three values that differ by k = 1: 2-1 = 1, 3-2 = 1, and 4-3 = 1. Return 3.
+there are three values that differ by k = 1: 2-1 = 1, 3-2 = 1, and 4-3 = 1. Return 3.
  */
 public class Pairs {
     public static int pairs(int k, List<Integer> array) {
@@ -25,14 +25,14 @@ public class Pairs {
 
         //array.stream().forEach(e -> set.add(e));
 
-        Collections.sort(array);
+        //Collections.sort(array);
 
         // e - x = k -> e - k = x
         
         return array
                 .stream()
                 .filter(e -> set.contains(e - k))    
-                .peek(e -> System.out.println(e))
+                //.peek(e -> System.out.println(e))
                 .collect(Collectors.toList())
                 .size();
     }
